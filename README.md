@@ -1,49 +1,42 @@
 # Fraud-in-auto-insurance-claims
-Auto insurance fraud occurs when individuals ororganized groups intentionally submit false orexaggerated claims for damages, injuries, ortheft involving their vehicles. This type of fraudis a significant problem for insurancecompanies, as it leads to increased costs andhigher premiums for all policyholders. 
-Detectingand preventing auto insurance fraud requires acombination of advanced data analytics,investigations, and fraud detection technologies.
+Auto insurance fraud occurs when people or organized groups intentionally make false or exaggerated claims for damages, injuries, or theft related to their vehicles. This deceptive behavior poses a major challenge for insurance companies, resulting in higher costs and increased premiums for all policyholders. To combat this issue, detecting and preventing auto insurance fraud necessitates the use of advanced data analytics, thorough investigations, and cutting-edge fraud detection technologies. By employing a combination of these strategies, insurance companies can safeguard against fraudulent activities and mitigate the financial impact on honest policyholders.
 
 # Data Pre processing and EDA
-train_demographics, train_claim , train_policy , train_vehicle , train , test_demographics,
-test_claim, test_policy, test_vehicle , test --> Loaded datasets.
+The datasets, including train_demographics, train_claim, train_policy, train_vehicle, test_demographics, test_claim, test_policy, test_vehicle, train, and test, have been successfully loaded. To provide a comprehensive overview, we displayed the head, data types, shape, info, descriptive statistics, and the count of missing values for each attribute in every CSV file.
 
-Displayed head, data types, shape, info, descriptive statistics, missing values, counts for each
-attribute in every csv files.
+Visualizations were employed to gain insights into the dataset columns. The next steps involved addressing missing values by utilizing mean, median, and mode imputation. Outliers were treated using the Interquartile Range (IQR) method. To facilitate machine learning model building, categorical-to-numerical type conversion was executed through Label Encoder.
 
-Visualisation performed on the columns and obtained insigthts.
+Correlations between columns were examined to understand relationships within the data. Subsequently, the train and test datasets were merged based on the 'Customer_Id' attribute to create final training and testing data. Feature scaling was implemented by fitting and transforming the data, ensuring consistency in scale.
 
-Missing value treatment performed using mean, median and mode.
-Outlier treatment performed using IQR method
-Type conversion(From categorical to numerical) performed using Label Encoder.
-Correlation between the columns displayed.
-
-All the test and train datasets merged on Customer_Id attribute to get final training and testing
-data to build the machine learning model.
-Feature scaling performed by fitting and transforming the data.
-
-Additionally top 20 featured displayed using decision tree feature importances.
+In addition, a decision tree was employed to identify the top 20 features, providing valuable insights into the most influential factors for the model. This comprehensive data preprocessing and transformation process lays the foundation for building a robust machine learning model for further analysis and predictions.
 
 # Model Building
-'X' will contain all the features from the training_data DataFrame except the 'ReportedFraud'
-column, and 'y' will contain the 'ReportedFraud' column values as the target labels. These
-variables are then typically used for traied fning a classification model, where X is used as input
-features, and y is used as the corresponding target variable for training the model to learn the
-relationship between the features and the fraud labels.
-Train-Test split performed with size of 0.3
-Build Logistic Regression, K Nearest Neighbour , Decision Tree, Naive bayes and Random Forest
-classification models for fraud detection.
-Evaluation matrics --> F1 score obtained from all the above mentioned machine learning models.
-Machine learning hyper parameter tuning performed on Decision tree classifier, Logistic
-regression , KNN and Random forest models using GridSearchCV.
-An increase in the model performance shown.
-The best result model prediction results saved along with Customer Id in a CSV file.
+In the process of building a fraud detection model, 'X' has been defined to encompass all features from the training data except the 'ReportedFraud' column, while 'y' contains the corresponding 'ReportedFraud' labels. This standard setup is crucial for training classification models, with 'X' serving as input features and 'y' as the target variable for the model to learn the relationship between features and fraud labels.
 
-# Advantages
-1.Improved Fraud Detection
+To assess model performance, a train-test split was executed with a size of 0.3. Subsequently, Logistic Regression, K Nearest Neighbour, Decision Tree, Naive Bayes, and Random Forest classification models were constructed for fraud detection. The evaluation metric used was the F1 score, providing a balanced measure of precision and recall.
 
-2.Time and Cost Efficiency
+To enhance model performance, hyperparameter tuning was conducted on Decision Tree Classifier, Logistic Regression, KNN, and Random Forest models using GridSearchCV. This optimization process led to an improvement in the model's predictive capabilities.
 
-3.Increased Accuracy
+The best-performing model's prediction results, along with Customer IDs, were saved in a CSV file. This holistic approach ensures the development of an effective fraud detection model, combining diverse machine learning algorithms, thorough evaluation metrics, and fine-tuning for optimal results.
 
-4.Consistency and Objectivity
 
-5.Scalability
+
+#Advantages of Automated Fraud Detection Systems
+
+1. Improved Fraud Detection:
+Automated systems enhance fraud detection capabilities by swiftly analyzing vast datasets and identifying suspicious patterns. This proactive approach helps in early detection and mitigation of fraudulent activities.
+
+2. Time and Cost Efficiency:
+Automation significantly reduces the time and resources required for fraud detection. With rapid data processing and real-time analysis, organizations can efficiently allocate resources, ultimately leading to cost savings.
+
+3. Increased Accuracy:
+Automated fraud detection systems leverage advanced algorithms and machine learning models, resulting in higher accuracy compared to traditional manual methods. This accuracy minimizes false positives and ensures that genuine transactions are not mistakenly flagged as fraudulent.
+
+4. Consistency and Objectivity:
+Automated systems provide consistent and objective evaluations by applying predefined algorithms uniformly. This consistency eliminates human biases and ensures a fair and standardized approach to fraud detection.
+
+5. Scalability:
+Automated systems can easily scale to handle increasing data volumes and growing complexities in fraudulent activities. This scalability allows organizations to adapt to evolving threats and maintain effective fraud detection measures.
+
+In summary, the adoption of automated fraud detection systems offers a range of benefits, including improved accuracy, time and cost efficiency, consistent and objective evaluations, and scalability to meet the dynamic challenges of fraud prevention.
+
