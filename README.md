@@ -21,7 +21,7 @@ The best-performing model's prediction results, along with Customer IDs, were sa
 
 
 
-#Advantages of Automated Fraud Detection Systems
+# Advantages of Automated Fraud Detection Systems
 
 1. Improved Fraud Detection:
 Automated systems enhance fraud detection capabilities by swiftly analyzing vast datasets and identifying suspicious patterns. This proactive approach helps in early detection and mitigation of fraudulent activities.
